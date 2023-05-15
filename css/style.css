@@ -18,7 +18,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ccc;
+
 }
 
 /* button */
@@ -64,18 +64,13 @@ main {
     display: none;
 }
 
-.item h1 {
+.text {
+    color: #fff;
+    text-align: end;
     position: absolute;
-    left: 0;
-    top: 0;
+    right: 20px;
+    bottom: 20px;
 }
-
-.item p {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
 
 
 /* Utility */

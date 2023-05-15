@@ -33,8 +33,11 @@ images.forEach(objFromImages => {
     container.innerHTML +=    
     `<div class="item">
         <img src="${objFromImages.image}" alt="">
-        <h1>${objFromImages.title}</h1>
-        <p>${objFromImages.text}</p>
+        <div class="text"> 
+            <h1>${objFromImages.title}</h1>
+            <p>${objFromImages.text}</p>
+        </div>
+        
     </div> `;
 });
     // se sei sul primo elemento lo crei e gli assegni la classe active
