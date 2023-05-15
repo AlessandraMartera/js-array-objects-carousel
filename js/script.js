@@ -98,24 +98,19 @@ next.addEventListener("click",
 before.addEventListener("click",
     function () {
         if ( count >= 0) {
-
-            // rimuovo dal div dell'img in cui suono posizionata la classe active
-            items[count].classList.remove("active");
-
-            // incremento il contatore dell'immagine su cui sono posizionata in questo momento
             count--;
             console.log(count);
 
+            // decremento il contatore dell'immagine su cui sono posizionata in questo momento
+            // and rimuovo dal div dell'img in cui suono posizionata la classe active
+            items[count + 1].classList.remove("active");
+            if ( count < 0 ) {
+                count = (items.length - 1);
+                console.log("nell if count è " + count);
+                items[count].classList.add("active");        
+            }
             // and aggiungo la classe active al successivo
             items[count].classList.add("active");
-
-            if ( count < (items.length - 1)) {
-                next.classList.remove("hidden");
-            }
-
-            if ( count === 0 ) {
-                before.classList.add("hidden");
-            }
         }
 
     }
