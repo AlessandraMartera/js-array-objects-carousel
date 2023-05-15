@@ -69,32 +69,25 @@ console.log(next);
 next.addEventListener("click",
     function () {
 
-        if ( count <= ( items.length - 1 )) {
+        if ( count < ( items.length )) {
 
+            // contatore con i click
             count++;
             console.log(count);
             
-
-            if ( count === (items.length) {
-                            items[count].classList.remove("active");
-                            count = 0;
-                            console.log("nell if count è " + count);
-                            items[count].classList.add("active");
-                        }
-
-            console.log("appena fuori conunt è " + count)
-
             // rimuovo dal div dell'img in cui suono posizionata la classe active
-            items[count].classList.remove("active");
-            
+            items[count - 1].classList.remove("active");
+
+            if ( count === 5) {
+                count = 0;
+                console.log("nell if count è " + count);
+                items[count].classList.add("active");
+            }
+
             // incremento il contatore dell'immagine su cui sono posizionata in questo momento
-            
-            
             // and aggiungo la classe active al successivo
             items[count].classList.add("active");
 
-            
-         
         }
             
 
