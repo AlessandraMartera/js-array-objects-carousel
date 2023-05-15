@@ -25,18 +25,38 @@ const images = [
 
 // Milestone 0:
 // Come nel primo carosello realizzato, focalizziamoci prima sulla creazione del markup statico: costruiamo il container e inseriamo l’immagine grande in modo da poter stilare lo slider.
+let container = document.getElementById("container");
+
+// for ( let i = 0; i < arrayPathImmages.length; i++ ) {
+    
+images.forEach(objFromImages => {
+    container.innerHTML +=    
+    `<div class="item">
+        <img src="${objFromImages.image}" alt="">
+    </div> `;
+});
+    // se sei sul primo elemento lo crei e gli assegni la classe active
+
+    
+
+    // per tutti gli altri elementi crei solo gli elementi
+
+
 const next = document.querySelector(".button.next");
 const before = document.querySelector(".button.before");
 const items = document.querySelectorAll(".item");
-const elItemSingle = document.querySelector(".item");
 
-for ();
+let count = 0;
+
+items[count].classList.add("active");
+
+
 // const elItemSingle = document.querySelector(".item");
 console.log(items);
 console.log(next);
 console.log(next);
 
-let count = 0;
+
 
 // button next img
 next.addEventListener("click",
