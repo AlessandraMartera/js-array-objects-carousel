@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general settings */
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* main */
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* button */
+.button {
+    width: 40px;
+    height: 40px;
+    background-color: antiquewhite;
+    border-radius: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+}
+
+.button.before {
+    top: 0; 
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+
+.button.next {
+    bottom: 5px; 
+    left: 50%;
+    transform: translate( -50%, 50%);
+}
+
+/* Puoi comunque adattare al wrapper il tag img, forzando height e width e sfruttando l'object fit  */
+
+/* cotainer */
+#container {
+    object-fit: contain;
+    position: relative;
+    border: 1px solid #555;
+}
+
+/* Single item */
+.item {
+    width: 1000px;
+    height: 400px;
+    display: none;
+}
+
+/* Utility */
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+.button:hover {
+    color: #555;
+    cursor: pointer;
+}
