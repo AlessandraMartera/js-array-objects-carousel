@@ -69,13 +69,13 @@ console.log(next);
 next.addEventListener("click",
     function () {
 
-        if ( count < ( items.length - 1 )) {
+        if ( count <= ( items.length - 1 )) {
 
             count++;
             console.log(count);
             
 
-            if ( count === items.length) {
+            if ( count === (items.length) {
                             items[count].classList.remove("active");
                             count = 0;
                             console.log("nell if count è " + count);
