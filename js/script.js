@@ -26,7 +26,7 @@ const images = [
 // Milestone 0:
 // Come nel primo carosello realizzato, focalizziamoci prima sulla creazione del markup statico: costruiamo il container e inseriamo l’immagine grande in modo da poter stilare lo slider.
 let container = document.getElementById("container");
-
+let sideBar = document.getElementById("side_bar");
 // for ( let i = 0; i < arrayPathImmages.length; i++ ) {
     
 images.forEach(objFromImages => {
@@ -40,19 +40,21 @@ images.forEach(objFromImages => {
         
     </div> `;
 });
-    // se sei sul primo elemento lo crei e gli assegni la classe active
+    /*
+images.forEach(objFromImages => {
+    sideBar.innerHTML +=    
+    `<div class="item active opacity">
+        <img src="${objFromImages.image}" alt="">  
+    </div> `;
+});
 
-    
-
-    // per tutti gli altri elementi crei solo gli elementi
-
-
+*/
 const next = document.querySelector(".button.next");
 const before = document.querySelector(".button.before");
 const items = document.querySelectorAll(".item");
 
 let count = 0;
-
+// se sei sul primo elemento lo crei e gli assegni la classe active
 items[count].classList.add("active");
 
 
@@ -66,26 +68,35 @@ console.log(next);
 // button next img
 next.addEventListener("click",
     function () {
+
         if ( count < ( items.length - 1 )) {
+
+            count++;
+            console.log(count);
+            
+
+            if ( count === items.length) {
+                            items[count].classList.remove("active");
+                            count = 0;
+                            console.log("nell if count è " + count);
+                            items[count].classList.add("active");
+                        }
+
+            console.log("appena fuori conunt è " + count)
 
             // rimuovo dal div dell'img in cui suono posizionata la classe active
             items[count].classList.remove("active");
             
             // incremento il contatore dell'immagine su cui sono posizionata in questo momento
-            count++;
-            console.log(count);
-
+            
+            
             // and aggiungo la classe active al successivo
             items[count].classList.add("active");
 
-            if ( count !== 0 ) {
-                before.classList.remove("hidden");
-            }
-
-            if ( count === (items.length - 1)) {
-                next.classList.add("hidden");
-            }
+            
+         
         }
+            
 
     }
 )

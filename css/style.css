@@ -12,9 +12,15 @@ img {
     object-fit: cover;
 }
 
+#side_bar img {
+    width: 100%;
+}
+
 /* main */
 main {
+    width: 60%;
     height: 100vh;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,9 +57,14 @@ main {
 
 /* cotainer */
 #container {
-    object-fit: contain;
+    
     position: relative;
     border: 1px solid #555;
+}
+
+#side_bar {
+    border: 1px solid #555;
+    width: 20%;
 }
 
 /* Single item */
@@ -70,6 +81,7 @@ main {
     position: absolute;
     right: 20px;
     bottom: 20px;
+    font-size: 20px;
 }
 
 
@@ -84,4 +96,7 @@ main {
 .button:hover {
     color: #555;
     cursor: pointer;
+}
+.opacity {
+    opacity: 1;
 }
