@@ -18,6 +18,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #ccc;
 }
 
 /* button */
@@ -31,6 +32,7 @@ main {
     justify-content: center;
     align-items: center;
     color: #ccc;
+    z-index: 900;
 }
 
 .button.before {
@@ -56,10 +58,25 @@ main {
 
 /* Single item */
 .item {
+    position: relative;
     width: 1000px;
     height: 400px;
     display: none;
 }
+
+.item h1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.item p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
 
 /* Utility */
 .active {
